@@ -24,12 +24,12 @@ const RightSide = () => {
     e.preventDefault();
     if (!newMessage.trim()) return;
 
-    const newMsgObj = {
+    const newMsg = {
       receiverId: selectedUser._id,
       text: newMessage,
     };
 
-    const sentMessage = await sendMessage(newMsgObj);
+    const sentMessage = await sendMessage(newMsg);
     if (sentMessage) {
       setMessages((prev) => [
         ...prev,
